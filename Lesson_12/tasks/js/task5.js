@@ -17,8 +17,11 @@ if (confirm('Start?')) {
 			if (arr[middle] === searchEl) return middle
 			if (arr[middle] < searchEl) start = middle + 1
 			if (arr[middle] > searchEl) end = middle - 1
-		}
-		return middle
+		} 
+		return -1
 	}
-	document.write(`${sortArrayNames(arrayNames)}<br> Ім'я Olga знаходиться під індексом - ${binarySearch(arrayNames, searchElement)}`)
+	let resultSearch = binarySearch(sortArrayNames(arrayNames), searchElement)
+	console.log(resultSearch);
+	if (resultSearch === -1) alert('Такого імені немає')
+	else document.write(`${sortArrayNames(arrayNames)}<br> Ім'я Olga знаходиться під індексом - ${resultSearch}`)
 }

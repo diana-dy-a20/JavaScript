@@ -17,8 +17,12 @@ if (confirm('Start?')) {
 			if (arr[middle].length === searchEl) return middle
 			if (arr[middle].length < searchEl) start = middle + 1
 			if (arr[middle].length > searchEl) end = middle - 1
-		}
-		return middle
+		} 
+		return -1
 	}
-	document.write(`${sortArrayNames(arrayNames)}<br> Ім'я довжино 5 символів знаходиться під індексом - ${binarySearch(arrayNames, searchElement)}`)
+	let resultSearch = binarySearch(arrayNames, searchElement)
+	console.log(resultSearch);
+	
+	if (resultSearch === -1) alert('Такого імені немає')
+	else document.write(`${sortArrayNames(arrayNames)}<br> Ім'я довжино 5 символів знаходиться під індексом - ${resultSearch}`)
 }
