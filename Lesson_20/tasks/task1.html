@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="js/task1.js"></script>
+	<style>
+		body {
+			background-color: rgb(14, 14, 46);
+			margin: 0;
+		}
+		.container {
+			position: relative;
+			width: 100vw;
+			height: 100vh;
+		}
+		@keyframes shine {
+			0% {
+				transform: scale(0);
+			}
+			50%{
+				transform: scale(1);
+			}
+			100%{
+				transform: scale(0);
+			}
+		}
+		.insect {
+			position: absolute;
+			animation-name: shine;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container"></div>
+</body>
+
+</html>
